@@ -4,7 +4,8 @@ public class Main {
         Shape rectangle = shapeFactory.getShape("Rectangle");
         Shape circle = shapeFactory.getShape("Circle");
         Shape square = shapeFactory.getShape("Square");
-        rectangle.draw();;
+        rectangle.draw();
+        square.draw();
         circle.draw();
     }
 }
