@@ -1,14 +1,14 @@
 package StrategyPattern;
 
 public class Main {
-    public static void main(String Args[]) {
-        Context contexOne = new Context(new Addition());
-        System.out.println(contexOne.executeStrategy(2, 4));
+    public static void main(String args[]){
+        Vehicle vehicleOne = new SuperSUV();
+        vehicleOne.drive();
 
-        Context contextTwo = new Context(new Subtraction());
-        System.out.println(contextTwo.executeStrategy(2, 4));
+        Vehicle vehicleTwo = new NormalCar();
+        vehicleTwo.drive();
 
-        Context contextThree = new Context(new Multiplication());
-        System.out.println(contextThree.executeStrategy(2, 4));
+        Vehicle vehicleThree = new SportsCar();
+        vehicleThree.drive();
     }
 }
