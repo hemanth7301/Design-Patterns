@@ -1,16 +1,17 @@
 package Singleton.DoubleLocking;
 
-public class Singleton{
+public class Singleton {
 
-    public static Singleton singletonObject;
+    public static volatile Singleton singletonObject;
 
     private Singleton() {
-        
+
     }
-    public static Singleton getInstance(){
-        if(singletonObject==null){
-            synchronized(Singleton.class){
-                if(singletonObject==null){
+
+    public static Singleton getInstance() {
+        if (singletonObject == null) {
+            synchronized (Singleton.class) {
+                if (singletonObject == null) {
                     return new Singleton();
                 }
             }
@@ -18,7 +19,7 @@ public class Singleton{
         return singletonObject;
     }
 
-    public void sayHello(){
+    public void sayHello() {
         System.out.println("Hi!! This is from Double Locking");
     }
 }
